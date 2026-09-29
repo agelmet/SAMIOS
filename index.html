@@ -3,7 +3,7 @@
   SAMIOS · Samios Dental — Ιωάννης Σάμιος, Χειρουργός Οδοντίατρος, Πεύκη
   Advon Media · 29 Sept 2026 · prospect build (draft)
   Named style: Clinical calm → «Teal & navy precision» (paper #F3F5F4, ink #152038, logo navy #2B3A67, logo teal #4B9998; Manrope variable everywhere — the logo's geometric sans)
-  Skeleton roll: hero = split, sticky photo right revealed through the logo's diagonal bands · nav = top bar
+  Skeleton roll: hero = cinematic full-bleed clinic photo revealed through the logo's diagonal bands (Angelo, 29 Sept: photo as the entire hero background; about moved right after the hero) · nav = top bar
     · services = two-column editorial list with self-drawing icons · social proof = Google grid wall + doctoranytime marquee
     · contact = split map + card, then full-width call band · FAQ = two-column list directly before contact
   Signature interaction: concern finder «Τι σας απασχολεί;» — 6 concerns → living tooth diagram + what we do, step by step
@@ -18,7 +18,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Οδοντίατρος Πεύκη | Ιωάννης Σάμιος · Samios Dental</title>
 <meta name="description" content="Χειρουργός οδοντίατρος στην Πεύκη, Βασιλέως Παύλου 6. Εμφυτεύματα, απονευρώσεις, όψεις, παιδοδοντία σε σύγχρονο ιατρείο. Κλείστε ραντεβού: 210 806 2253.">
-<meta name="theme-color" content="#F3F5F4">
+<meta name="theme-color" content="#0F1830">
 <link rel="alternate" hreflang="el" href="./">
 <link rel="alternate" hreflang="en" href="./?lang=en">
 <link rel="alternate" hreflang="x-default" href="./">
@@ -38,7 +38,8 @@
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png?v=1">
 <link rel="manifest" href="assets/icons/site.webmanifest?v=1">
 <link rel="preload" href="assets/fonts/manrope-greek-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/samios-dental-odontiatreio-pefki-1296.webp" as="image" imagesrcset="assets/img/samios-dental-odontiatreio-pefki-760.webp 760w, assets/img/samios-dental-odontiatreio-pefki-1296.webp 1296w" imagesizes="(max-width: 900px) 100vw, 50vw" fetchpriority="high">
+<link rel="preload" as="image" media="(min-width: 701px)" imagesrcset="assets/img/samios-dental-iatreio-pefki-1100.webp 1100w, assets/img/samios-dental-iatreio-pefki-1600.webp 1600w, assets/img/samios-dental-iatreio-pefki-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" media="(max-width: 700px)" imagesrcset="assets/img/samios-dental-odontiatreio-pefki-760.webp 760w, assets/img/samios-dental-odontiatreio-pefki-1296.webp 1296w" imagesizes="100vw" fetchpriority="high">
 <style id="advon-fonts">
 @font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:200 800;src:url(assets/fonts/manrope-greek-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/manrope-greek-wght-normal.woff2) format('woff2');unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
 @font-face{font-family:'Manrope';font-style:normal;font-display:swap;font-weight:200 800;src:url(assets/fonts/manrope-latin-wght-normal.woff2) format('woff2-variations'),url(assets/fonts/manrope-latin-wght-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -636,6 +637,63 @@ html:not(.js) .mf-draw{display:none}
  .cdot,.intro-veil{display:none!important}
 }
 
+/* ===== hero v2 — the clinic photo is the whole hero background (Angelo, 29 Sept 2026) ===== */
+.hero{background:#0F1830;color:#fff}
+.hero-grid{position:relative;z-index:2;display:flex;align-items:center;min-height:100svh}
+.hero-txt{padding:128px 24px 120px max(24px,calc((100vw - 1240px)/2));max-width:calc(max(24px,(100vw - 1240px)/2) + 700px);gap:24px}
+.hero-media{position:absolute;inset:0;padding:0;z-index:0}
+.hm-frame{position:absolute;inset:0;border-radius:0;box-shadow:none;background:#1B2748}
+.hm-frame img{object-position:62% 58%;transform-origin:62% 55%}
+.hm-shade{background:linear-gradient(90deg,rgba(13,21,43,.88) 0%,rgba(13,21,43,.72) 28%,rgba(13,21,43,.3) 48%,rgba(13,21,43,0) 64%),linear-gradient(180deg,rgba(13,21,43,.42) 0%,rgba(13,21,43,0) 20%,rgba(13,21,43,0) 74%,rgba(13,21,43,.4) 100%)}
+.bands i{width:19%}
+.hero .h1{color:#fff;text-shadow:0 2px 30px rgba(8,14,30,.35)}
+.hero .em{color:var(--teal-l)}
+.hero .uline::after{background:var(--teal-l)}
+.hero .lead{color:rgba(255,255,255,.84)}
+.hero .eyebrow{color:var(--teal-l)}
+.hero .eyebrow::before{background:linear-gradient(90deg,var(--teal-l),rgba(255,255,255,.6))}
+.hero .proof{background:rgba(255,255,255,.94);color:var(--ink)}
+.hbg{inset:0;z-index:1}
+.hdots{background-image:radial-gradient(rgba(255,255,255,.16) 1.1px,transparent 1.3px);-webkit-mask-image:radial-gradient(ellipse at 18% 40%,#000 5%,transparent 55%);mask-image:radial-gradient(ellipse at 18% 40%,#000 5%,transparent 55%)}
+.w1{background:radial-gradient(closest-side,rgba(75,153,152,.32),transparent)}
+.w2{left:-6%;width:520px;height:520px;background:radial-gradient(closest-side,rgba(43,58,103,.35),transparent)}
+.hstripes{left:18%;right:auto;top:0;width:44%;height:100%;opacity:.55}
+.hstripes path,.hstripes path:nth-child(2),.hstripes path:nth-child(3),.hstripes path:nth-child(4){stroke:rgba(255,255,255,.22)}
+.hstripes path:nth-child(odd){stroke:rgba(143,207,203,.35)}
+.htooth{stroke:rgba(255,255,255,.12);left:3%;bottom:5%}
+.hring{border-color:rgba(255,255,255,.14)}
+.r1{left:30%;right:auto;top:auto;bottom:-120px}
+.r2{left:22%;right:auto;top:auto;bottom:-260px;border-color:rgba(143,207,203,.14)}
+.today{left:auto;right:max(24px,calc((100vw - 1240px)/2));bottom:196px;color:var(--ink)}
+.chip-float{right:max(24px,calc((100vw - 1240px)/2));bottom:112px;color:var(--ink)}
+.hero .scue{bottom:88px}
+.hm-frame img{object-position:60% 62%}
+.scue{border-color:rgba(255,255,255,.5)}
+.scue span{background:#fff}
+.hdr:not(.solid) .brand{background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:8px 14px;border-radius:16px;box-shadow:0 8px 24px -14px rgba(0,0,0,.45)}
+.brand{transition:background .4s,padding .4s}
+.about{margin-top:-56px}
+.quote{border-radius:56px 56px 0 0;margin-top:-56px;position:relative;z-index:3;padding-top:120px}
+@media (max-width:900px){
+ .hero{min-height:100svh}
+ .hero-grid{min-height:100svh;align-items:flex-end}
+ .hero-media{order:0;position:absolute;inset:0;height:auto;margin:0}
+ .hm-frame{border-radius:0}
+ .hm-frame img{object-position:50% 72%}
+ .hm-shade{background:linear-gradient(180deg,rgba(13,21,43,.45) 0%,rgba(13,21,43,.1) 20%,rgba(13,21,43,.55) 42%,rgba(13,21,43,.9) 64%,rgba(13,21,43,.96) 100%)}
+ .hero-txt{padding:0 20px 72px;max-width:none;gap:18px}
+ .hbg{inset:0}
+ .hstripes{left:auto;right:-30%;width:90%}
+ .today{top:92px;right:12px;left:auto;bottom:auto;padding:9px 13px}
+ .quote{border-radius:36px 36px 0 0;margin-top:-36px;padding-top:88px}
+ .about{margin-top:-36px}
+}
+@media (max-width:520px){
+ .hero .h1{font-size:36px}
+ .hero .lead{font-size:16px}
+ .hdr:not(.solid) .brand{padding:6px 10px}
+}
+
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [{"@type": "Dentist", "@id": "#practice", "name": "Samios Dental — Ιωάννης Σάμιος, Χειρουργός Οδοντίατρος", "alternateName": "Samios Dental", "description": "Χειρουργός οδοντίατρος στην Πεύκη: εμφυτεύματα, ενδοδοντία, προσθετική, όψεις πορσελάνης, λεύκανση, παιδοδοντία, θεραπεία ούλων.", "image": "assets/img/samios-dental-odontiatreio-pefki-1296.webp", "logo": "assets/icons/icon-512.png", "telephone": "+30 210 806 2253", "email": "samios.dental@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Βασιλέως Παύλου 6", "addressLocality": "Πεύκη", "postalCode": "151 22", "addressRegion": "Αττική", "addressCountry": "GR"}, "geo": {"@type": "GeoCoordinates", "latitude": 38.060307, "longitude": 23.797856}, "hasMap": "https://maps.google.com/?cid=12239040088807624927", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "10:00", "closes": "22:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday"], "opens": "10:00", "closes": "21:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00"}], "areaServed": ["Πεύκη", "Μαρούσι", "Λυκόβρυση", "Κηφισιά", "Μελίσσια", "Βριλήσσια"], "priceRange": "€€", "paymentAccepted": "Cash, Credit Card", "currenciesAccepted": "EUR", "availableLanguage": ["el", "en", "fr"], "medicalSpecialty": ["Dentistry"], "sameAs": ["https://www.doctoranytime.gr/d/Odontiatros/samios-ioannis", "https://maps.google.com/?cid=12239040088807624927"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "bestRating": "5", "reviewCount": "215"}, "founder": {"@id": "#dr"}, "employee": {"@id": "#dr"}}, {"@type": "Person", "@id": "#dr", "name": "Ιωάννης Σάμιος", "alternateName": "Ioannis Samios", "honorificSuffix": "DDS, CDE", "jobTitle": "Χειρουργός Οδοντίατρος", "image": "assets/img/ioannis-samios-odontiatros-pefki-960.webp", "worksFor": {"@id": "#practice"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών"}, {"@type": "CollegeOrUniversity", "name": "University of Leeds"}, {"@type": "CollegeOrUniversity", "name": "UCL Eastman Dental Institute"}], "knowsLanguage": ["el", "en", "fr"], "memberOf": [{"@type": "Organization", "name": "Οδοντιατρικός Σύλλογος Αττικής"}, {"@type": "Organization", "name": "Εταιρεία Οδοντοστοματολογικής Έρευνας"}], "hasCredential": {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Πτυχίο Οδοντιατρικής (DDS)", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών"}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Πώς κλείνω ραντεβού;", "acceptedAnswer": {"@type": "Answer", "text": "Τηλεφωνήστε στο ιατρείο στο 210 806 2253 ή στο κινητό 694 441 0445. Μπορείτε επίσης να κλείσετε online, μέσω του doctoranytime, όποια ώρα σας βολεύει. Το ιατρείο λειτουργεί κατόπιν ραντεβού."}}, {"@type": "Question", "name": "Ποιο είναι το ωράριο του ιατρείου;", "acceptedAnswer": {"@type": "Answer", "text": "Δευτέρα έως Τετάρτη 10:00–22:00, Πέμπτη και Παρασκευή 10:00–21:00 και Σάββατο 10:00–17:00. Την Κυριακή το ιατρείο είναι κλειστό. Οι επισκέψεις γίνονται κατόπιν ραντεβού."}}, {"@type": "Question", "name": "Τι κάνω αν πονάει ξαφνικά ένα δόντι;", "acceptedAnswer": {"@type": "Answer", "text": "Καλέστε μας το συντομότερο στο 210 806 2253 και περιγράψτε μας τι νιώθετε. Θα σας δώσουμε οδηγίες και θα σας εξυπηρετήσουμε όσο πιο γρήγορα γίνεται. Μέχρι τότε, αποφύγετε να μασάτε από εκείνη την πλευρά."}}, {"@type": "Question", "name": "Εξετάζετε και παιδιά;", "acceptedAnswer": {"@type": "Answer", "text": "Ναι. Ο γιατρός έχει παρακολουθήσει μετεκπαιδευτικό σεμινάριο παιδοδοντίας στο University of Leeds και οι έδρες του ιατρείου είναι κατάλληλες για παιδιά. Η πρώτη επίσκεψη συνιστάται γύρω στον πρώτο χρόνο ζωής."}}, {"@type": "Question", "name": "Μπορεί να έρθει κάποιος με κινητικά προβλήματα;", "acceptedAnswer": {"@type": "Answer", "text": "Οι οδοντιατρικές έδρες Belmont του ιατρείου είναι κατάλληλες και για άτομα με κινητικά προβλήματα. Πείτε μας τι χρειάζεστε όταν κλείνετε ραντεβού, ώστε να είμαστε έτοιμοι να σας εξυπηρετήσουμε όσο καλύτερα γίνεται."}}, {"@type": "Question", "name": "Πόσο κοστίζει μια θεραπεία;", "acceptedAnswer": {"@type": "Answer", "text": "Το κόστος εξαρτάται από το τι χρειάζεται το κάθε στόμα, γι’ αυτό ξεκινάμε πάντα με εξέταση. Μετά από αυτήν σας εξηγούμε το σχέδιο θεραπείας και το κόστος του, ώστε να αποφασίσετε με όλη την πληροφορία μπροστά σας."}}, {"@type": "Question", "name": "Πώς μπορώ να πληρώσω;", "acceptedAnswer": {"@type": "Answer", "text": "Μπορείτε να πληρώσετε με κάρτα ή με μετρητά."}}, {"@type": "Question", "name": "Πώς έρχομαι στο ιατρείο και πού παρκάρω;", "acceptedAnswer": {"@type": "Answer", "text": "Το ιατρείο βρίσκεται στη Βασιλέως Παύλου 6 στην Πεύκη, 770 μ. από τον σταθμό Μαρούσι της Γραμμής 1 και 800 μ. από τον σταθμό ΚΑΤ. Η στάση λεωφορείου «14η Αμαρουσίου» είναι στα 90 μ. Ιδιωτικό parking δεν υπάρχει· μπορείτε να σταθμεύσετε στους γύρω δρόμους."}}, {"@type": "Question", "name": "Σε ποιες γλώσσες μπορώ να επικοινωνήσω με τον γιατρό;", "acceptedAnswer": {"@type": "Answer", "text": "Ο γιατρός μιλά ελληνικά, αγγλικά και γαλλικά, οπότε μπορείτε να συζητήσετε κάθε λεπτομέρεια της θεραπείας σας στη γλώσσα που σας βολεύει."}}, {"@type": "Question", "name": "Κάθε πότε χρειάζεται έλεγχος και καθαρισμός;", "acceptedAnswer": {"@type": "Answer", "text": "Για τους περισσότερους ανθρώπους αρκεί ένας έλεγχος με καθαρισμό κάθε έξι μήνες. Αν έχετε ευαίσθητα ούλα ή εμφυτεύματα, ίσως χρειάζεστε συχνότερες επισκέψεις — θα σας το πει ο γιατρός μετά την εξέταση."}}]}]}
@@ -687,9 +745,9 @@ html:not(.js) .mf-draw{display:none}
       <svg class="b-word" viewBox="0 0 2159 1077" aria-hidden="true"><use href="#lg-word"/></svg>
     </a>
     <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <a href="#o-giatros" data-en="The dentist">Ο γιατρός</a>
       <a href="#ypiresies" data-en="Treatments">Υπηρεσίες</a>
       <a href="#ti-xreiazomai" data-en="Find your treatment">Τι χρειάζομαι;</a>
-      <a href="#o-giatros" data-en="The dentist">Ο γιατρός</a>
       <a href="#iatreio" data-en="The practice">Το ιατρείο</a>
       <a href="#kritikes" data-en="Reviews">Κριτικές</a>
       <a href="#epikoinonia" data-en="Contact">Επικοινωνία</a>
@@ -711,9 +769,9 @@ html:not(.js) .mf-draw{display:none}
     <button class="mnav-x" type="button" aria-label="Κλείσιμο μενού" data-en-aria="Close menu"><span aria-hidden="true">×</span></button>
   </div>
   <nav aria-label="Μενού κινητού">
+    <a href="#o-giatros" data-en="The dentist">Ο γιατρός</a>
     <a href="#ypiresies" data-en="Treatments">Υπηρεσίες</a>
     <a href="#ti-xreiazomai" data-en="Find your treatment">Τι χρειάζομαι;</a>
-    <a href="#o-giatros" data-en="The dentist">Ο γιατρός</a>
     <a href="#iatreio" data-en="The practice">Το ιατρείο</a>
     <a href="#kritikes" data-en="Reviews">Κριτικές</a>
     <a href="#syxnes-erotiseis" data-en="FAQ">Συχνές ερωτήσεις</a>
@@ -743,8 +801,8 @@ html:not(.js) .mf-draw{display:none}
       <h1 id="h1" class="h1"><span class="hw" data-en="A dentist in Pefki">Οδοντίατρος στην Πεύκη</span> <span class="hw" data-en="who explains">που σας εξηγεί</span> <span class="hw em"><span class="uline" data-en="every step.">κάθε βήμα.</span></span></h1>
       <p class="lead hi" data-en="Dr Ioannis Samios, dental surgeon (University of Athens), cares for children and adults in a new, fully equipped practice at 6 Vasileos Pavlou Street — calmly, clearly, with time for your questions.">Ο Ιωάννης Σάμιος, χειρουργός οδοντίατρος (ΕΚΠΑ), φροντίζει παιδιά και ενήλικες σε ένα νέο, πλήρως εξοπλισμένο ιατρείο στη Βασιλέως Παύλου 6 — με ηρεμία, σαφήνεια και χρόνο για τις ερωτήσεις σας.</p>
       <div class="cta hi">
-        <a class="btn btn-lg mag shine" href="tel:+302108062253"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Book: 210 806 2253">Ραντεβού: 210 806 2253</span></a>
-        <a class="tlink" href="https://www.doctoranytime.gr/d/Odontiatros/samios-ioannis?autobook=1" target="_blank" rel="noopener"><span data-en="or book online">ή κλείστε online</span> <svg class="ic arw" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-lg btn-light mag shine" href="tel:+302108062253"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Book: 210 806 2253">Ραντεβού: 210 806 2253</span></a>
+        <a class="tlink light" href="https://www.doctoranytime.gr/d/Odontiatros/samios-ioannis?autobook=1" target="_blank" rel="noopener"><span data-en="or book online">ή κλείστε online</span> <svg class="ic arw" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
       <a class="proof hi" href="https://www.google.com/maps/place/Samios+Dental/data=!4m7!3m6!1s0x14a19f8a0b35ba0b:0xa9d9ce1d9524d0df!8m2!3d38.060307!4d23.797856!9m1!1b1" target="_blank" rel="noopener">
         <svg class="g" aria-hidden="true"><use href="#i-g"/></svg>
@@ -756,10 +814,11 @@ html:not(.js) .mf-draw{display:none}
     <div class="hero-media">
       <div class="hm-frame">
         <picture>
-          <img src="assets/img/samios-dental-odontiatreio-pefki-1296.webp" srcset="assets/img/samios-dental-odontiatreio-pefki-760.webp 760w, assets/img/samios-dental-odontiatreio-pefki-1296.webp 1296w" sizes="(max-width: 900px) 100vw, 50vw" width="1296" height="1728" fetchpriority="high" alt="Η οδοντιατρική έδρα του ιατρείου Samios Dental στην Πεύκη" data-en-alt="The dental chair at Samios Dental in Pefki">
+          <source media="(max-width: 700px)" srcset="assets/img/samios-dental-odontiatreio-pefki-760.webp 760w, assets/img/samios-dental-odontiatreio-pefki-1296.webp 1296w" sizes="100vw" width="1296" height="1728">
+          <img src="assets/img/samios-dental-iatreio-pefki-1600.webp" srcset="assets/img/samios-dental-iatreio-pefki-1100.webp 1100w, assets/img/samios-dental-iatreio-pefki-1600.webp 1600w, assets/img/samios-dental-iatreio-pefki-2400.webp 2400w" sizes="100vw" width="2400" height="1601" fetchpriority="high" alt="Το χειρουργείο του οδοντιατρείου Samios Dental στην Πεύκη, με την έδρα Belmont" data-en-alt="The treatment room at Samios Dental in Pefki, with the Belmont chair">
         </picture>
         <span class="hm-shade" aria-hidden="true"></span>
-        <span class="bands" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="bands" aria-hidden="true"><i style="left:-45.0%"></i><i style="left:-27.5%"></i><i style="left:-10.0%"></i><i style="left:7.5%"></i><i style="left:25.0%"></i><i style="left:42.5%"></i><i style="left:60.0%"></i><i style="left:77.5%"></i><i style="left:95.0%"></i></span>
       </div>
       <div class="today glass" aria-live="polite">
         <span class="dot" aria-hidden="true"></span>
@@ -771,7 +830,38 @@ html:not(.js) .mf-draw{display:none}
       </div>
     </div>
   </div>
-  <a class="scue" href="#stoixeia" aria-label="Συνέχεια" data-en-aria="Scroll down"><span></span></a>
+  <a class="scue" href="#o-giatros" aria-label="Συνέχεια" data-en-aria="Scroll down"><span></span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec about" id="o-giatros" aria-labelledby="ab-h">
+  <div class="wrap about-grid">
+    <figure class="ab-photo polaroid">
+      <img src="assets/img/ioannis-samios-odontiatros-pefki-960.webp" srcset="assets/img/ioannis-samios-odontiatros-pefki-600.webp 600w, assets/img/ioannis-samios-odontiatros-pefki-960.webp 960w" sizes="(max-width: 900px) 86vw, 440px" width="960" height="1186" loading="lazy" decoding="async" alt="Ο οδοντίατρος Ιωάννης Σάμιος στο ιατρείο του στην Πεύκη" data-en-alt="Dentist Ioannis Samios at his practice in Pefki" class="lb">
+      <figcaption><b data-en="Ioannis Samios">Ιωάννης Σάμιος</b><span>DDS, CDE</span></figcaption>
+    </figure>
+    <div class="ab-txt">
+      <p class="eyebrow" data-en="The dentist">Ο γιατρός</p>
+      <h2 id="ab-h" class="lc" data-en="Ioannis Samios, dental surgeon">Ιωάννης Σάμιος, χειρουργός οδοντίατρος</h2>
+      <div class="ab-body">
+        <p class="pr" data-en="Ioannis Samios is a graduate of the School of Dentistry of the National and Kapodistrian University of Athens. He attended postgraduate courses in paediatric dentistry at the University of Leeds and in aesthetic dentistry under the auspices of UCL Eastman Dental Institute.">Ο Ιωάννης Σάμιος είναι απόφοιτος της Οδοντιατρικής Σχολής του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών. Παρακολούθησε μετεκπαιδευτικά σεμινάρια παιδοδοντίας στο University of Leeds και αισθητικής οδοντιατρικής υπό την αιγίδα του UCL Eastman Dental Institute.</p>
+        <p class="pr" data-en="He began his career in private practices, gaining valuable experience in everyday clinical work and in complex cases. During his military service he served as a dental surgeon at the 401 General Military Hospital of Athens and the 492 General Military Hospital of Alexandroupoli, providing oral surgery and emergency dental care.">Ξεκίνησε την πορεία του σε ιδιωτικά οδοντιατρεία, αποκτώντας πολύτιμη εμπειρία στην καθημερινή κλινική πράξη και σε σύνθετα περιστατικά. Στη στρατιωτική του θητεία υπηρέτησε ως χειρουργός οδοντίατρος στο 401 Γενικό Στρατιωτικό Νοσοκομείο Αθηνών και στο 492 Γενικό Στρατιωτικό Νοσοκομείο Αλεξανδρούπολης, σε περιστατικά στοματικής χειρουργικής και επείγουσας οδοντιατρικής φροντίδας.</p>
+        <p class="pr" data-en="Since 2010 he has run his own practice, keeping up with implantology, endodontics, prosthodontics and aesthetic dentistry through seminars and conferences. His patients mention the same thing again and again: he listens, he explains, and he never rushes.">Από το 2010 διατηρεί το δικό του ιατρείο και παρακολουθεί συνεχώς σεμινάρια και συνέδρια σε εμφυτευματολογία, ενδοδοντία, προσθετική και αισθητική οδοντιατρική. Οι ασθενείς του γράφουν ξανά και ξανά το ίδιο: ακούει, εξηγεί και δεν βιάζεται ποτέ.</p>
+      </div>
+      <ol class="tl" aria-label="Βιογραφικό" data-en-aria="Curriculum vitae">
+        <li><span class="tl-y">2010 —</span><b data-en="Own private practice, Pefki – Marousi">Ιδιωτικό ιατρείο, Πεύκη – Μαρούσι</b></li>
+        <li><span class="tl-y">2010</span><b data-en="Postgraduate course in paediatric dentistry, University of Leeds">Μετεκπαιδευτικό σεμινάριο παιδοδοντίας, University of Leeds</b></li>
+        <li><span class="tl-y">UCL</span><b data-en="Postgraduate course in aesthetic dentistry, UCL Eastman Dental Institute">Μετεκπαιδευτικό σεμινάριο αισθητικής οδοντιατρικής, UCL Eastman Dental Institute</b></li>
+        <li><span class="tl-y">2008 – 09</span><b data-en="Dental surgeon, 401 General Military Hospital of Athens and 492 General Military Hospital of Alexandroupoli">Χειρουργός οδοντίατρος, 401 ΓΣΝΑ και 492 ΓΣΝ Αλεξανδρούπολης</b></li>
+        <li><span class="tl-y">2004 – 10</span><b data-en="Assistant and dentist in private practices">Βοηθός και οδοντίατρος σε ιδιωτικά οδοντιατρεία</b></li>
+        <li><span class="tl-y">2001 – 07</span><b data-en="School of Dentistry, National and Kapodistrian University of Athens">Οδοντιατρική Σχολή, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών</b></li>
+      </ol>
+      <div class="ab-meta">
+        <div><h3 data-en="Memberships">Μέλος</h3><ul><li data-en="Attica Dental Association (since 2008)">Οδοντιατρικός Σύλλογος Αττικής (από το 2008)</li><li data-en="Society for Dental and Oral Research (since 2022)">Εταιρεία Οδοντοστοματολογικής Έρευνας (από το 2022)</li><li data-en="Hellenic Society of Paediatric Dentistry (2005 – 2011)">Ελληνική Παιδοδοντική Εταιρεία (2005 – 2011)</li></ul></div>
+        <div><h3 data-en="Languages">Γλώσσες</h3><p class="chips"><span data-en="Greek">Ελληνικά</span><span data-en="English">Αγγλικά</span><span data-en="French">Γαλλικά</span></p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ PROOF ============ -->
@@ -931,36 +1021,6 @@ html:not(.js) .mf-draw{display:none}
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="sec about" id="o-giatros" aria-labelledby="ab-h">
-  <div class="wrap about-grid">
-    <figure class="ab-photo polaroid">
-      <img src="assets/img/ioannis-samios-odontiatros-pefki-960.webp" srcset="assets/img/ioannis-samios-odontiatros-pefki-600.webp 600w, assets/img/ioannis-samios-odontiatros-pefki-960.webp 960w" sizes="(max-width: 900px) 86vw, 440px" width="960" height="1186" loading="lazy" decoding="async" alt="Ο οδοντίατρος Ιωάννης Σάμιος στο ιατρείο του στην Πεύκη" data-en-alt="Dentist Ioannis Samios at his practice in Pefki" class="lb">
-      <figcaption><b data-en="Ioannis Samios">Ιωάννης Σάμιος</b><span>DDS, CDE</span></figcaption>
-    </figure>
-    <div class="ab-txt">
-      <p class="eyebrow" data-en="The dentist">Ο γιατρός</p>
-      <h2 id="ab-h" class="lc" data-en="Ioannis Samios, dental surgeon">Ιωάννης Σάμιος, χειρουργός οδοντίατρος</h2>
-      <div class="ab-body">
-        <p class="pr" data-en="Ioannis Samios is a graduate of the School of Dentistry of the National and Kapodistrian University of Athens. He attended postgraduate courses in paediatric dentistry at the University of Leeds and in aesthetic dentistry under the auspices of UCL Eastman Dental Institute.">Ο Ιωάννης Σάμιος είναι απόφοιτος της Οδοντιατρικής Σχολής του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών. Παρακολούθησε μετεκπαιδευτικά σεμινάρια παιδοδοντίας στο University of Leeds και αισθητικής οδοντιατρικής υπό την αιγίδα του UCL Eastman Dental Institute.</p>
-        <p class="pr" data-en="He began his career in private practices, gaining valuable experience in everyday clinical work and in complex cases. During his military service he served as a dental surgeon at the 401 General Military Hospital of Athens and the 492 General Military Hospital of Alexandroupoli, providing oral surgery and emergency dental care.">Ξεκίνησε την πορεία του σε ιδιωτικά οδοντιατρεία, αποκτώντας πολύτιμη εμπειρία στην καθημερινή κλινική πράξη και σε σύνθετα περιστατικά. Στη στρατιωτική του θητεία υπηρέτησε ως χειρουργός οδοντίατρος στο 401 Γενικό Στρατιωτικό Νοσοκομείο Αθηνών και στο 492 Γενικό Στρατιωτικό Νοσοκομείο Αλεξανδρούπολης, σε περιστατικά στοματικής χειρουργικής και επείγουσας οδοντιατρικής φροντίδας.</p>
-        <p class="pr" data-en="Since 2010 he has run his own practice, keeping up with implantology, endodontics, prosthodontics and aesthetic dentistry through seminars and conferences. His patients mention the same thing again and again: he listens, he explains, and he never rushes.">Από το 2010 διατηρεί το δικό του ιατρείο και παρακολουθεί συνεχώς σεμινάρια και συνέδρια σε εμφυτευματολογία, ενδοδοντία, προσθετική και αισθητική οδοντιατρική. Οι ασθενείς του γράφουν ξανά και ξανά το ίδιο: ακούει, εξηγεί και δεν βιάζεται ποτέ.</p>
-      </div>
-      <ol class="tl" aria-label="Βιογραφικό" data-en-aria="Curriculum vitae">
-        <li><span class="tl-y">2010 —</span><b data-en="Own private practice, Pefki – Marousi">Ιδιωτικό ιατρείο, Πεύκη – Μαρούσι</b></li>
-        <li><span class="tl-y">2010</span><b data-en="Postgraduate course in paediatric dentistry, University of Leeds">Μετεκπαιδευτικό σεμινάριο παιδοδοντίας, University of Leeds</b></li>
-        <li><span class="tl-y">UCL</span><b data-en="Postgraduate course in aesthetic dentistry, UCL Eastman Dental Institute">Μετεκπαιδευτικό σεμινάριο αισθητικής οδοντιατρικής, UCL Eastman Dental Institute</b></li>
-        <li><span class="tl-y">2008 – 09</span><b data-en="Dental surgeon, 401 General Military Hospital of Athens and 492 General Military Hospital of Alexandroupoli">Χειρουργός οδοντίατρος, 401 ΓΣΝΑ και 492 ΓΣΝ Αλεξανδρούπολης</b></li>
-        <li><span class="tl-y">2004 – 10</span><b data-en="Assistant and dentist in private practices">Βοηθός και οδοντίατρος σε ιδιωτικά οδοντιατρεία</b></li>
-        <li><span class="tl-y">2001 – 07</span><b data-en="School of Dentistry, National and Kapodistrian University of Athens">Οδοντιατρική Σχολή, Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών</b></li>
-      </ol>
-      <div class="ab-meta">
-        <div><h3 data-en="Memberships">Μέλος</h3><ul><li data-en="Attica Dental Association (since 2008)">Οδοντιατρικός Σύλλογος Αττικής (από το 2008)</li><li data-en="Society for Dental and Oral Research (since 2022)">Εταιρεία Οδοντοστοματολογικής Έρευνας (από το 2022)</li><li data-en="Hellenic Society of Paediatric Dentistry (2005 – 2011)">Ελληνική Παιδοδοντική Εταιρεία (2005 – 2011)</li></ul></div>
-        <div><h3 data-en="Languages">Γλώσσες</h3><p class="chips"><span data-en="Greek">Ελληνικά</span><span data-en="English">Αγγλικά</span><span data-en="French">Γαλλικά</span></p></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ KEY STATEMENT ============ -->
 <section class="quote" aria-label="Από τις κριτικές" data-en-aria="From the reviews">
@@ -1164,7 +1224,7 @@ html:not(.js) .mf-draw{display:none}
     </div>
     <div>
       <h3 data-en="Menu">Μενού</h3>
-      <p class="ftr-links"><a href="#ypiresies" data-en="Treatments">Υπηρεσίες</a><a href="#o-giatros" data-en="The dentist">Ο γιατρός</a><a href="#iatreio" data-en="The practice">Το ιατρείο</a><a href="#kritikes" data-en="Reviews">Κριτικές</a><a href="#syxnes-erotiseis" data-en="FAQ">Συχνές ερωτήσεις</a></p>
+      <p class="ftr-links"><a href="#o-giatros" data-en="The dentist">Ο γιατρός</a><a href="#ypiresies" data-en="Treatments">Υπηρεσίες</a><a href="#iatreio" data-en="The practice">Το ιατρείο</a><a href="#kritikes" data-en="Reviews">Κριτικές</a><a href="#syxnes-erotiseis" data-en="FAQ">Συχνές ερωτήσεις</a></p>
     </div>
   </div>
   <div class="wrap ftr-bottom">
